@@ -17,17 +17,39 @@ window.addEventListener("DOMContentLoaded", () => {
     name: "Audi",
     make: "Q8",
     type: "SUV",
-    maxSpeed: 180,
+    isPassengercar: true //boolean value
   }; /*  an object contain key value pairs separated by a colon. key is on the left and the value on the right of the colon */
 
   console.log(car.name); // accessing the object values using the dot operator
   const carlist = [car];
   const red = "red";
   //console.log(name);
-  const nameSection = document.getElementById("nameSection");
+  const nameSection = document.querySelector("#nameSection");
 
-  nameSection.innerText = name;
+  nameSection.innerText = car.availableColors
   nameSection.style.color = red;
   nameSection.style.backgroundColor = "blue";
   nameSection.style.display = "flex ";
+
+  console.log(car.name)
+/* window.alert(car.name)//shows popup alert messages */
+
+
+
+function multiplier(){
+  
+  const results=document.getElementById("results")
+  const number1=document.getElementById("number1")
+  const number2=document.getElementById("number2")
+  const number3=document.getElementById("number3")
+  const answer=parseInt(number1.value)*parseInt(number2.value)*parseInt(number3.value)
+    
+  results.innerText=answer
+
+   /*  console.log(answer) */
+}
+
+const button =document.getElementById("button")
+button.addEventListener("click",multiplier)
+
 });
