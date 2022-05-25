@@ -25,6 +25,9 @@ window.addEventListener("DOMContentLoaded", () => {
   const red = "red";
   //console.log(name);
   const nameSection = document.getElementById("nameSection");
+  const carSection = document.querySelector("#car");
+
+  carSection.innerText = `Name of car: ${car.name}`; // accessing a variable in string concatenation ${variablenName}
 
   nameSection.innerText = name;
   nameSection.style.color = red;
