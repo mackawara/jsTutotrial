@@ -13,21 +13,21 @@ window.addEventListener("DOMContentLoaded", () => {
   //console.log(list);
   //console.log(name);
 
-  const kar = {
+  const car = {
     name: `Audi`,
     make: "Q8",
     type: "SUV",
     maxSpeed: 180,
   }; /*  an object contain key value pairs separated by a colon. key is on the left and the value on the right of the colon */
 
-  console.log(kar.name); // accessing the object values using the dot operator
-  const carlist = [kar];
+  console.log(car.name); // accessing the object values using the dot operator
+  const carlist = [car];
   const red = "red";
   //console.log(name);
   const nameSection = document.getElementById("nameSection");
   const carSection = document.querySelector("#car");
 
-  carSection.innerText = `Name of car: ${kar.name}`; // accessing a variable in string concatenation ${variablenName} inside back ticks
+  carSection.innerText = `Name of car: ${car.name}`; // accessing a variable in string concatenation ${variablenName} inside back ticks
   /* carSection.innerText = "name of car " + car.name; */
   nameSection.innerText = name;
   nameSection.style.color = red;
@@ -49,6 +49,24 @@ window.addEventListener("DOMContentLoaded", () => {
     return number1 + number2;
   }
   addition(2, 3); // this is the same const number1=2 const number2=3
+
+  const showButton = document.querySelector(`#show`);
+
+  function carInformation() {
+    document.getElementById(
+      "carDetails"
+    ).innerText = `Car Name: ${car.name} \n Car make: ${car.make} \n  . Speed : ${car.maxSpeed}} 
+    `;
+  }
+  showButton.addEventListener("mouseleave", carInformation); // event listener takes 2 arguments  1 the event 2 callback or function when event happens
+
+  const button2 = document.getElementsByClassName("button2");
+  console.log(button2);
+  button2[0].addEventListener("click", () => {
+    // arrow function or anpnymous function  syntax is  ()=>{ enter code here}
+    const body = document.getElementsByTagName("body");
+    body[0].style.backgroundColor = "red";
+  });
   result2.innerText = `the result of addition is ${addition(10, 10)}`;
   result.innerText = addition(2, 2); // output in broswers is 22 because JS cant perform arithmetic operations on strings
 });
