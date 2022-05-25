@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", () => {
   //console.log(name);
 
   const car = {
-    name: "Audi",
+    name: `Audi`,
     make: "Q8",
     type: "SUV",
     maxSpeed: 180,
@@ -27,8 +27,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const nameSection = document.getElementById("nameSection");
   const carSection = document.querySelector("#car");
 
-  carSection.innerText = `Name of car: ${car.name}`; // accessing a variable in string concatenation ${variablenName}
-
+  carSection.innerText = `Name of car: ${car.name}`; // accessing a variable in string concatenation ${variablenName} inside back ticks
+  /* carSection.innerText = "name of car " + car.name; */
   nameSection.innerText = name;
   nameSection.style.color = red;
   nameSection.style.backgroundColor = "blue";
